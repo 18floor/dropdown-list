@@ -1,24 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Dropdown from "./components/Dropdown";
 
 function App() {
+  const items = [
+    'Profile Information',
+    'Change Password',
+    'Become PRO',
+    'Help',
+    'Log Out',
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Dropdown icon="public" items={items} caption="Account settings"/>
   );
 }
 
